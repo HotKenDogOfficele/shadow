@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "shadow:block/shadow_ore"
+  }
+}

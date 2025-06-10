@@ -1,9 +1,10 @@
 package com.gameformatrial.shadow;
 
+import com.gameformatrial.shadow.blocks.BlockGen;
 import com.gameformatrial.shadow.item.WeaponsTools;
+import com.gameformatrial.shadow.utils.CreativeTab;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -29,9 +30,11 @@ public class Shadow {
         modEventBus.addListener(this::addCreative);
 
         WeaponsTools.register(modEventBus);
+        BlockGen.register(modEventBus);
+        CreativeTab.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC); //AFBLIJVEN!!
+        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC); //stay away!!\\
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

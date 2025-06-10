@@ -1,3 +1,8 @@
 {
-  "item.shadow.shadow_sword": "Shadow Sword"
+  "item.shadow.shadow_sword": "Shadow Sword",
+  "item.shadow.shadow_ore": "Shadow Ore",
+
+  "block.shadow.shadow_ore": "Shadow Ore",
+
+  "creativetab.shadow.shadow_modpk": "The Eminence of shadows"
 }
