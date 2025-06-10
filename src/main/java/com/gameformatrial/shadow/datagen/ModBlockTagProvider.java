@@ -1,8 +1,11 @@
 package com.gameformatrial.shadow.datagen;
 
 import com.gameformatrial.shadow.Shadow;
+import com.gameformatrial.shadow.blocks.BlockGen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -16,22 +19,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-//        tag(BlockTags.MINEABLE_WITH_PICKAXE)
-//                .add(BlockGen.SHADOW_ORE.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(BlockGen.SHADOW_ORE.get());
+
+        tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .add(BlockGen.SHADOW_ORE.get());
 //
-//        tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-//                .add(BlockGen.SHADOW_ORE.get());
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
 //
-//        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
-//                .addTag(Shadow_Tags.Blocks.NEEDS_SHADOW_TOOL)
-//                .remove(BlockGen.SHADOW_ORE.get());
-//
-//
-//        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
-//                .addTag(Shadow_Tags.Blocks.NEEDS_SHADOW_TOOL);
-//
-//        tag(Shadow_Tags.Blocks.INCOORECT_FOR_SHADOW_TOOL)
+//        tag(BlockTags.Blocks.INCOORECT_FOR_SHADOW_TOOL)
 //                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-//                .remove(Shadow_Tags.Blocks.NEEDS_SHADOW_TOOL);
+//                .remove(BlockTags.Blocks.NEEDS_SHADOW_TOOL);
     }
 }

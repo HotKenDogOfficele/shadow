@@ -10,19 +10,19 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagProvider extends ItemTagsProvider {
-    public ModItemTagProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> completableFuture,
-                              CompletableFuture<TagLookup<Block>> lookupCompletableFuture, @Nullable ExistingFileHelper existingFileHelper) {
-        super(packOutput, completableFuture, lookupCompletableFuture, Shadow.MODID, existingFileHelper);
-    }
-
-    @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
-//        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-//                .add(ModItems..get())
-//                .add(ModItems..get())
-//                .add(Items.COAL)
-//                .add(Items.STICK)
-//                .add(Items.COMPASS);
-    }
-}
+//public class ModItemTagProvider extends ItemTagsProvider {
+//    public ModItemTagProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> completableFuture,
+//                              CompletableFuture<TagLookup<Block>> lookupCompletableFuture, @Nullable ExistingFileHelper existingFileHelper) {
+//        super(packOutput, completableFuture, lookupCompletableFuture, Shadow.MODID, existingFileHelper);
+//    }
+//
+////    @Override
+////    protected void addTags(HolderLookup.Provider pProvider) {
+////        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
+////                .add(ModItems..get())
+////                .add(ModItems..get())
+////                .add(Items.COAL)
+////                .add(Items.STICK)
+////                .add(Items.COMPASS);
+//    }
+//}

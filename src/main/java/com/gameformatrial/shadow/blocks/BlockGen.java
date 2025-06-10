@@ -38,8 +38,9 @@ public class BlockGen {
             new Block(Block.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Shadow.MODID, "shadow_ore")))
                     .strength(10f)
-                    .requiresCorrectToolForDrops()
-                    .sound(SoundType.STONE)
+//                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.ANCIENT_DEBRIS)
+
             )
     );
 }
