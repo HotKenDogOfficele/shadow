@@ -18,16 +18,16 @@ public class GenCF {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
-        register(context, END_SHADOW_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, BlockGen.SHADOW_ORE.get().defaultBlockState(), 1));
+        register(context, SHADOW_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables, BlockGen.SHADOW_ORE.get().defaultBlockState(), 1));
     }
 
-    public static ResourceKey<ConfiguredFeature<?, ?>> resourceKey(String name) {
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Shadow.MODID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>>void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> END_SHADOW_ORE_KEY = resourceKey("shadow_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHADOW_ORE_KEY = registerKey("shadow_ore");
 }

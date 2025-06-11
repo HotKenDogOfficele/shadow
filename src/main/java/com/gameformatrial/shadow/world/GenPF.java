@@ -18,7 +18,7 @@ public class GenPF {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeature = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, END_SHADOW_ORE_PLACED_KEY, configuredFeature.getOrThrow(GenCF.END_SHADOW_ORE_KEY), GenOrePM.commonOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+        register(context, SHADOW_ORE_PLACED_KEY, configuredFeature.getOrThrow(GenCF.SHADOW_ORE_KEY), GenOrePM.commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {
@@ -29,5 +29,5 @@ public class GenPF {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    public static final ResourceKey<PlacedFeature> END_SHADOW_ORE_PLACED_KEY = registerKey("shadow_ore_placed");
+    public static final ResourceKey<PlacedFeature> SHADOW_ORE_PLACED_KEY = registerKey("shadow_ore_placed");
 }

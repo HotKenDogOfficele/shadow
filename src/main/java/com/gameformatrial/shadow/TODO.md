@@ -1,5 +1,5 @@
 # TODO:
-  - Ore spawning
+  ~~- Ore spawning~~
   - refined progress(from ore -> shadow slime kinda)
   - abilities (menu)
 

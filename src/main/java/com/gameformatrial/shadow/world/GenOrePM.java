@@ -10,10 +10,10 @@ public class GenOrePM {
     }
 
     public static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRangePlacement) {
-        return List.of(CountPlacement.of(pCount), pHeightRangePlacement);
+        return orePlacement(CountPlacement.of(pCount), pHeightRangePlacement);
     }
 
     public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRangePlacement) {
-        return List.of(RarityFilter.onAverageOnceEvery(pChance), pHeightRangePlacement);
+        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRangePlacement);
     }
 }

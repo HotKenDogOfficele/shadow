@@ -17,12 +17,12 @@ public class GenBM {
         var placedFeuture = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_SHADOW_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomes.getOrThrow(BiomeTags.IS_END), HolderSet.direct(placedFeuture.getOrThrow(GenPF.END_SHADOW_ORE_PLACED_KEY)), GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_SHADOW_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomes.getOrThrow(BiomeTags.IS_END), HolderSet.direct(placedFeuture.getOrThrow(GenPF.SHADOW_ORE_PLACED_KEY)), GenerationStep.Decoration.UNDERGROUND_ORES));
     }
 
-    public static ResourceKey<BiomeModifier> resourceKey(String name) {
+    public static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Shadow.MODID, name));
     }
 
-    public static final ResourceKey<BiomeModifier> ADD_SHADOW_ORE= resourceKey("add_shadow_ore");
+    public static final ResourceKey<BiomeModifier> ADD_SHADOW_ORE= registerKey("add_shadow_ore");
 }
