@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "texture_size": [64, 64],
+  "textures": {
+    "layer0": "shadow:item/weird_slime"
+  }
+}

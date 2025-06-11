@@ -40,7 +40,6 @@ public class BlockGen {
                     .strength(10f)
 //                    .requiresCorrectToolForDrops()
                     .sound(SoundType.ANCIENT_DEBRIS)
-
             )
     );
 }

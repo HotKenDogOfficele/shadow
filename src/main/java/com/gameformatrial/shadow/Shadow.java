@@ -1,6 +1,7 @@
 package com.gameformatrial.shadow;
 
 import com.gameformatrial.shadow.blocks.BlockGen;
+import com.gameformatrial.shadow.item.UseableItems;
 import com.gameformatrial.shadow.item.WeaponsTools;
 import com.gameformatrial.shadow.utils.CreativeTab;
 import com.mojang.logging.LogUtils;
@@ -30,6 +31,7 @@ public class Shadow {
         modEventBus.addListener(this::addCreative);
 
         WeaponsTools.register(modEventBus);
+        UseableItems.register(modEventBus);
         BlockGen.register(modEventBus);
         CreativeTab.register(modEventBus);
 
