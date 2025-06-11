@@ -1,0 +1,4 @@
+// 1.21.5	2025-06-11T20:17:11.403997458	Registries
+6bdcf801e9303d3a368749282218794e495853cb data/shadow/forge/biome_modifier/add_shadow_ore.json
+4e4762f57ebd40a9d7b1e83ac8fae4ab17540de9 data/shadow/worldgen/configured_feature/shadow_ore.json
+fffa4ad3466c8a2f2854fea610af1a52d720ba4c data/shadow/worldgen/placed_feature/shadow_ore_placed.json

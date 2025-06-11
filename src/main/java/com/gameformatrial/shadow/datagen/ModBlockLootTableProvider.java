@@ -2,7 +2,6 @@ package com.gameformatrial.shadow.datagen;
 
 import com.gameformatrial.shadow.blocks.BlockGen;
 import com.gameformatrial.shadow.item.UseableItems;
-import com.gameformatrial.shadow.item.WeaponsTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -28,7 +27,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.add(BlockGen.SHADOW_ORE.get(),
-                block -> createMultipleOreDrops(BlockGen.SHADOW_ORE.get(), UseableItems.WEIRD_SLIME.get(), 1, 3));
+                block -> createMultipleOreDrops(BlockGen.SHADOW_ORE.get(), UseableItems.WEIRD_SLIME.get(), 1, 2));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
