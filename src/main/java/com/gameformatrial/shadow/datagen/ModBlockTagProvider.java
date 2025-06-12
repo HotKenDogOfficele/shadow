@@ -8,6 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,7 +19,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
+    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlockGen.SHADOW_ORE.get());
 
@@ -26,6 +27,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(BlockGen.SHADOW_ORE.get());
 //
         tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
 
 //

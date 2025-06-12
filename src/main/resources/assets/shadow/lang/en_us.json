@@ -5,5 +5,8 @@
   "item.shadow.shadow_ore": "Shadow Ore",
   "block.shadow.shadow_ore": "Shadow Ore",
 
-  "creativetab.shadow.shadow_modpk": "The Eminence of shadows"
+  "creativetab.shadow.shadow_modpk": "The Eminence of shadows",
+  "Ability.Screen": "Ability",
+  "key.mcreatortest.next_abi": "Next Ability",
+  "key.mcreatortest.prev_abi": "Previous Ability"
 }

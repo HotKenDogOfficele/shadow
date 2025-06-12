@@ -1,7 +1,7 @@
 # TODO:
   ~~- Ore spawning~~
   - refined progress(from ore -> shadow slime kinda)
-  - abilities (menu)
+  ~~- abilities (menu)~~
 
 ## **Abilities**
   - kill other entityies in the range(and can add other entitys you don't want to kill)

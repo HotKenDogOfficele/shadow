@@ -1,4 +1,8 @@
-// 1.21.5	2025-06-10T22:34:34.605707154	Tags for minecraft:block mod id shadow
+// 1.21.5	2025-06-11T21:08:53.009331642	Tags for minecraft:block mod id shadow
 03da767ca7ce6905f9d0ee252be17326a11da088 data/forge/tags/block/needs_netherite_tool.json
 577e7440034a70366bfa9c500aed75a455c5c1c9 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+577e7440034a70366bfa9c500aed75a455c5c1c9 data/minecraft/tags/block/incorrect_for_gold_tool.json
+577e7440034a70366bfa9c500aed75a455c5c1c9 data/minecraft/tags/block/incorrect_for_iron_tool.json
+577e7440034a70366bfa9c500aed75a455c5c1c9 data/minecraft/tags/block/incorrect_for_stone_tool.json
+577e7440034a70366bfa9c500aed75a455c5c1c9 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 03da767ca7ce6905f9d0ee252be17326a11da088 data/minecraft/tags/block/mineable/pickaxe.json
