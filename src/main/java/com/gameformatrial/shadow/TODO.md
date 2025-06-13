@@ -8,7 +8,7 @@
   - Custom armor for The eminence of shadow
   - more skills
   - animation
-  **- Shadow foot slash - Working**
+  - **Shadow foot slash - Working**
   - Shadow claws
   - Magic overflow/ Magic aura
   - Magic stand on water
