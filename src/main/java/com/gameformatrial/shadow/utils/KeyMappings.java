@@ -1,5 +1,6 @@
 package com.gameformatrial.shadow.utils;
 
+import com.gameformatrial.shadow.network.AbilityPacket;
 import com.gameformatrial.shadow.ui.AbilitiesOverlay;
 import net.minecraft.client.KeyMapping;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class McreatortestModKeyMappings {
+public class KeyMappings {
     private static final Map<String, String> ABILITY_IMAGE_MAP = new LinkedHashMap<>();
     private static final List<String> ABILITY_KEYS = new ArrayList<>();
 
@@ -30,6 +31,7 @@ public class McreatortestModKeyMappings {
 
     private static int currentAbiIndex = 0;
     public static String CurrentAbi = ABILITY_KEYS.get(currentAbiIndex); // Track current abi key
+    //        System.out.println(McreatortestModKeyMappings.CurrentAbi); // Give you the current Abi.
 
     public static final KeyMapping NEXT_ABI = new KeyMapping(
             "key.mcreatortest.next_abi", GLFW.GLFW_KEY_O, "key.categories.ui") {
@@ -69,9 +71,24 @@ public class McreatortestModKeyMappings {
         }
     };
 
+    public static final KeyMapping USE_ABI = new KeyMapping(
+            "key.mcreatortest.use_abi", GLFW.GLFW_KEY_K, "key.categories.ui") {
+        private boolean isDownOld = false;
+
+        @Override
+        public void setDown(boolean isDown) {
+            super.setDown(isDown);
+            if (isDownOld != isDown && isDown) {
+                NetworkHandler.sendToServer(new AbilityPacket(CurrentAbi)); // Send current ability key
+            }
+            isDownOld = isDown;
+        }
+    };
+
     @SubscribeEvent
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
         event.register(NEXT_ABI);
         event.register(PREV_ABI);
+        event.register(USE_ABI);
     }
 }

@@ -8,7 +8,7 @@
   - Custom armor for The eminence of shadow
   - more skills
   - animation
-  - Shadow foot slash
+  **- Shadow foot slash - Working**
   - Shadow claws
   - Magic overflow/ Magic aura
   - Magic stand on water
@@ -23,7 +23,7 @@
   - Demon blood (make entiys 100x stronger)
   - diablo pils(make for x mins al good effect, with hunger dus effect)
 
-## **Atomic idee**
+## **Atomic idea**
   - atomic domain (make him immune)
   - Atomic Purple beam to sky // schok wave around the beam
   - If atomic activate the atomic domain deactivate**

@@ -3,9 +3,11 @@ package com.gameformatrial.shadow;
 import com.gameformatrial.shadow.blocks.BlockGen;
 import com.gameformatrial.shadow.item.UseableItems;
 import com.gameformatrial.shadow.item.WeaponsTools;
+import com.gameformatrial.shadow.network.AbilityPacket;
 import com.gameformatrial.shadow.utils.CreativeTab;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,6 +19,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.ChannelBuilder;
+import net.minecraftforge.network.SimpleChannel;
 import org.slf4j.Logger;
 
 @Mod(Shadow.MODID)
@@ -40,7 +44,7 @@ public class Shadow {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        register();
     }
 
     // Add the example block item to the building blocks tab
@@ -62,5 +66,21 @@ public class Shadow {
         public static void onClientSetup(FMLClientSetupEvent event) {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+    }
+
+    public static final SimpleChannel NETWORK = ChannelBuilder
+            .named(ResourceLocation.fromNamespaceAndPath(MODID,"main"))
+            .networkProtocolVersion(0)
+            .clientAcceptedVersions((status, version) -> true)
+            .serverAcceptedVersions((status, version) -> true)
+            .simpleChannel();
+
+    @SuppressWarnings("deprecation")
+    public static void register() {
+        NETWORK.messageBuilder(AbilityPacket.class, 0)
+                .encoder(AbilityPacket::encode)
+                .decoder(AbilityPacket::decode)
+                .consumer(AbilityPacket::handle)
+                .add();
     }
 }
